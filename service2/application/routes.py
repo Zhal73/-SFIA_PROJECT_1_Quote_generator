@@ -9,7 +9,7 @@ import random
 
 #generates a the name of a random author 
 @app.route('/get_author',methods=['GET'])
-def get_animal():
+def get_author():
     authors = ['Albert Einstein','Walt Disney','Winston Churchill','Nelson Mandela','Henry Ford','George Addair','Amelia Earhart','Vincent Van Gogh','Confucius','Francis of Assisi','Denzel Washington','Theodore Roosevelt','Pele','Michelangelo']
     author = authors[random.randrange(14)]
     return Response(author,mimetype='text/plain')
