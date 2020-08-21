@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<div>
+	<h3> This s for you:</h3>
+	<span>
+		<p>
+		Once <b><i>  {{ data1 }}</i> </b> said: " {{ data2 }} " <br><br><br>
+		   {{ data3 }} <br><br>
+	<span>
+		<a href="{{ url_for('generate_quote') }} ">Do yo want another one?</a>
+<!--
+	<p> These are all the records so far: <p>
+	{% if posts %}
+		{% for item in posts %}
+			<div>
+				Animal : {{ item.animal }} <br>
+				Noise  : {{ item.noise }} <br>
+				--------------------------------
+			<div>
+		{% endfor %}
+	{% endif %}
+-->
+<div>
+{% endblock %}
