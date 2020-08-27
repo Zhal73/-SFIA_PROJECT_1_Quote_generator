@@ -1,0 +1,22 @@
+- hosts: docker
+  become: true
+  roles:
+    - docker
+
+- hosts: swarm_init
+  become: true
+  vars:
+    swarm_info:
+  roles:
+    - swarm_init
+
+- hosts: swarm_init 
+  gather_facts: no
+  tasks: []
+
+- hosts: swarm_worker
+  become: true
+  vars:
+    swarm_info:
+  roles:
+  - swarm_worker
