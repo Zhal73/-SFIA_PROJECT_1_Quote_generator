@@ -1,5 +1,17 @@
 version: '3.7'
 services:
+  nginx:
+    image: nginx
+    deploy:
+          replicas: 4
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
   service1:
     image: 127.0.01:4999/service1
     build: ./service1
