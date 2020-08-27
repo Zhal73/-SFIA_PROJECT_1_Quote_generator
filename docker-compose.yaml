@@ -1,44 +1,44 @@
 version: '3.7'
 services:
   service1:
-          #image: 127.0.01:4999/service1
+    image: 127.0.01:4999/service1
     build: ./service1
+    deploy:
+          replicas: 4
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
-        #deploy:
-        #replicas: 4
     environment:
       DATABASE_URI: ${DATABASE_URI}
       TEST_DB_URI: ${TEST_DB_URI}
   service2:
-          #image: 127.0.01:4999/service2      
+    image: 127.0.01:4999/service2      
     build: ./service2
+    deploy:
+          replicas: 4
     ports:
       - target: 5001
         published: 5001
         protocol: tcp
-        #deploy:
-        #replicas: 4
   service3:
-          #image: 127.0.01:4999/service3      
+    image: 127.0.01:4999/service3      
     build: ./service3
+    deploy:
+          replicas: 4
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
-        #deploy:
-        #replicas: 4
   service4:
-          #image: 127.0.01:4999/service4
+    image: 127.0.01:4999/service4
     build: ./service4
+    deploy:
+          replicas: 4
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
-        #deploy:
-        #replicas: 4
   
   database: 
     image: mysql:5.7
@@ -48,20 +48,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: quote_archive
-      MYSQL_DATABASE: test_quote
     volumes:
       - type: volume
         source: database-volume
         target: /var/lib/mysql
 
-  database2:
-    extends: database
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: test_quote
-    volumes:
-      - type: volume
-        source: database-volume
-        target: /var/lib/mysql
 volumes:
   database-volume:        
