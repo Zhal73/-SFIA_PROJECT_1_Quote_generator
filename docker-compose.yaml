@@ -11,6 +11,7 @@ services:
         #replicas: 4
     environment:
       DATABASE_URI: ${DATABASE_URI}
+      TEST_DB_URI: ${TEST_DB_URI}
   service2:
           #image: 127.0.01:4999/service2      
     build: ./service2
@@ -47,10 +48,20 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: quote_archive
+      MYSQL_DATABASE: test_quote
     volumes:
       - type: volume
         source: database-volume
         target: /var/lib/mysql
 
+  database2:
+    extends: database
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: test_quote
+    volumes:
+      - type: volume
+        source: database-volume
+        target: /var/lib/mysql
 volumes:
   database-volume:        
