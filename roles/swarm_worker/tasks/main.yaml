@@ -1,0 +1,31 @@
+- name: install pip
+  apt:
+    name: python3-pip
+- name: pip install docker
+  pip:
+    name: docker
+
+- name: print variable
+  debug:
+    msg: "variable content is {{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}" 
+
+- name: Addnodes
+  docker_swarm:
+    state: join
+    advertise_addr: ssh-vm-1
+    join_token: "{{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: sfia2-project:2377
+ 
+- name: Addnodes
+  docker_swarm:
+    state: join
+    advertise_addr: ssh-vm-2
+    join_token: "{{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: sfia2-project:2377
+
+- name: Addnodes
+  docker_swarm:
+    state: join
+    advertise_addr: ssh-vm-3
+    join_token: "{{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: sfia2-project:2377
