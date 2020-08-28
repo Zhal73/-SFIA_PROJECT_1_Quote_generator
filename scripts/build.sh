@@ -9,12 +9,11 @@ echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 sudo chown -R $(whoami):$(whoami) ~/*
 source ~/.bashrc
 pip install --user ansible
-ansible --version
+~/.local/bin/ansible --version
 
 
 echo "Run ansible Playbook"
-source ~/.bashrc
-ansible-playbook -v -i ../inventory.yaml ../playbook.yaml
+~/.local/bin/ansible-playbook -v -i ../inventory.yaml ../playbook.yaml
 
 docker-compose build
 docker login
