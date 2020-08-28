@@ -1,6 +1,5 @@
 #! /bin/bash
 
-//install ansible
 echo "Ansible Installation"
 sudo apt-get update
 sudo apt-get install python -y
@@ -11,11 +10,9 @@ pip3 install --user ansible
 ansible --versioni
 
 
-//run ansible
 echo "Run ansible Playbook"
-ansible-playbook -v -i inventory.cfg playbook.yaml
+ansible-playbook -v -i ../inventory.yaml ../playbook.yaml
 
-// Builds the images and push into DockerHub
 source ~/.bashrc
 docker-compose build
 docker login
