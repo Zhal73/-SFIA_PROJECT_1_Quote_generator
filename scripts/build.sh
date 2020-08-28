@@ -6,6 +6,7 @@ sudo apt-get update
 sudo apt-get install python -y
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
+sudo chown -R $(whoami):$(whoami) ~/*
 source ~/.bashrc
 pip install --user ansible
 ansible --version
