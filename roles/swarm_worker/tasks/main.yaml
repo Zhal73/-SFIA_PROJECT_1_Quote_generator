@@ -8,7 +8,6 @@
 - name: print variable
   debug:
     msg: "variable content is {{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}" 
-
 - name: Addnodes
   docker_swarm:
     state: join
