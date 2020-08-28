@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body_content %}
 <div>
-	<h2> This is for you:</h2>
+	<h2> This is for you only:</h2>
 	<span>
 		<p>
 		Once <b><i>  {{ data1 }}</i> </b> said: <i>" {{ data2 }} "</i> <br><br><br>
@@ -9,11 +9,11 @@
 	</span>
 	<a href="{{ url_for('generate_quote') }} "><b>Do yo want another one?</b></a> <br><br>
 		<b>----------------------------------------------------------------------------</b>
-		<p> <h3>More illumination here for you:</h3> </p>
+		<p> <h3>These are my inspirations so far:</h3> </p>
 	{% if posts %}
 		{% for item in posts %}
 		<div>
-			Illumination n. {{ item.id }}: <br><br>
+			Inspiration n. {{ item.id }}: <br><br>
 			<span style="margin-left:2em">
 				Once <b><i> {{ item.author }} </i> </b> said: <i>" {{ item.quote }} "</i><br><br>
 				{{ item.genuinity }} <br>
