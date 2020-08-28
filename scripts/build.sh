@@ -1,13 +1,14 @@
 #! /bin/bash
 
 echo "Ansible Installation"
+whoamai
 sudo apt-get update
 sudo apt-get install python -y
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 source ~/.bashrc
 pip3 install --user ansible
-ansible --versioni
+ansible --version
 
 
 echo "Run ansible Playbook"
