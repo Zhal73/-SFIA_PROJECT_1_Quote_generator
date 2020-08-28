@@ -13,7 +13,7 @@ pip install --user ansible
 
 
 echo "Run ansible Playbook"
-~/.local/bin/ansible-playbook -v -i ../inventory.yaml ../playbook.yaml
+~/.local/bin/ansible-playbook -v -i inventory.yaml playbook.yaml
 
 docker-compose build
 docker login
