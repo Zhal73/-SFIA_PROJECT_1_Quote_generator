@@ -7,7 +7,7 @@ sudo apt-get install python -y
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 source ~/.bashrc
-pip3 install --user ansible
+pip install --user ansible
 ansible --version
 
 
