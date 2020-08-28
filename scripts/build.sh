@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "Ansible Installation"
-whoamai
+whoami
 sudo apt-get update
 sudo apt-get install python -y
 mkdir -p ~/.local/bin
