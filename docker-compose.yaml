@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   nginx:
-    image: nginx
+    image: nginx:latest
     deploy:
           replicas: 4
     ports:
@@ -13,7 +13,7 @@ services:
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
   service1:
-    image: 127.0.01:4999/service1
+    image: zhal73/service1
     build: ./service1
     deploy:
           replicas: 4
@@ -25,7 +25,7 @@ services:
       DATABASE_URI: ${DATABASE_URI}
       TEST_DB_URI: ${TEST_DB_URI}
   service2:
-    image: 127.0.01:4999/service2      
+    image: zhal73/service2      
     build: ./service2
     deploy:
           replicas: 4
@@ -34,7 +34,7 @@ services:
         published: 5001
         protocol: tcp
   service3:
-    image: 127.0.01:4999/service3      
+    image: zhal73/service3      
     build: ./service3
     deploy:
           replicas: 4
@@ -43,7 +43,7 @@ services:
         published: 5002
         protocol: tcp
   service4:
-    image: 127.0.01:4999/service4
+    image: zhal73/service4
     build: ./service4
     deploy:
           replicas: 4
@@ -51,7 +51,6 @@ services:
       - target: 5003
         published: 5003
         protocol: tcp
-  
   database: 
     image: mysql:5.7
     ports:
