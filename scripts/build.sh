@@ -12,9 +12,9 @@ ansible --version
 
 
 echo "Run ansible Playbook"
+source ~/.bashrc
 ansible-playbook -v -i ../inventory.yaml ../playbook.yaml
 
-source ~/.bashrc
 docker-compose build
 docker login
 docker push zhal73/service1:latest
