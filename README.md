@@ -123,9 +123,7 @@ The application also contains and Nginx web server that act as reverse proxy, th
 The database is also containerised with docker and deployed with multiple replicas as for the services forming the main application. The database used consist in a single table as here represented:  
 
 
-
 ![](https://drive.google.com/uc?export=view&id=1dLEH6Sxe5ruxxH0FZSflOdcR3iJsZ4tA)
-
 
 
 ### Project Tracking
@@ -141,13 +139,12 @@ The following images illustrates the stories I created and their score:
 ![](https://drive.google.com/uc?export=view&id=1mnck4qEeXGxTAgngYiHeZs9C1H46p9SK)
 
 
-
 I development of the application follower the QA-Academy timeline in terms of topics, so I developed different aspect of the application once I learned the relevant topic. So I had to adapt my Sprints to cover these aspect, and to fit within the time window I had for the project, which was three weeks. So I covered the project development with a total of two Sprints.
 
 the following images illustrates a Sprint one:
 
-![](https://drive.google.com/uc?export=view&id=1xrATrNxIlClByq5gRj0BuyQ1ILxXXe8S)
 
+		![](https://drive.google.com/uc?export=view&id=1xrATrNxIlClByq5gRj0BuyQ1ILxXXe8S) 
 
 
 ### Risk Assessment
