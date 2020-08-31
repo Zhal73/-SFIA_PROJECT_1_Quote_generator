@@ -366,10 +366,10 @@ Then a typical test would be:
 	# is redirected to the generate quote page
 	# when the correspondent link is clicked
     def test_1_home_to_quotess(self):
-        # click the link to the full list of movies
+        # click the link to the generate quotes page
         self.driver.find_element_by_xpath('/html/body/div/a').click()
 
-        # Assert that browser redirects to all_movie page
+        # Assert that browser redirects to generate quote page
         assert url_for('generate_quote') in self.driver.current_url
 ```
 
