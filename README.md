@@ -30,7 +30,7 @@ DockerHub : https://hub.docker.com/u/zhal73
 - [CI Pipeline](#cipipeline)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [Future Improvements](#future improvement)
+- [Future Improvements](#futureimprovement)
 - [Acknowledgements](#acknowledgements)
 
 - [Author](#author)
@@ -144,7 +144,7 @@ I development of the application follower the QA-Academy timeline in terms of to
 the following images illustrates a Sprint one:
 
 
-		![](https://drive.google.com/uc?export=view&id=1xrATrNxIlClByq5gRj0BuyQ1ILxXXe8S) 
+		![](https://drive.google.com/uc?export=view&id=1bghdX_VxN26iaMsbTXkAWF323SpCii8q) 
 
 
 ### Risk Assessment
