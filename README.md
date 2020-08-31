@@ -212,8 +212,8 @@ Once more tools were introduced I was able to change the development pipeline in
 So the final CI pipeline became:
 
 
-
 ![](https://drive.google.com/uc?export=view&id=1J5nlampg5Hsu72CA-XmO3-SKhVCJ6MUh)
+
 
 ### Testing 
 
