@@ -34,9 +34,8 @@ Note: Some of the images may not load on this document, despite they are shared 
 - [CI Pipeline](#cipipeline)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [Future Improvements](#future improvement)
+- [Future Improvements](#futureimprovement)
 - [Acknowledgements](#acknowledgements)
-
 - [Author](#author)
 
 ------
@@ -118,7 +117,13 @@ Wont have:
 
 The four services are small Flask application written in Python. The following diagram represent the architecture of the application with the interaction between the services:
 
-![](https://drive.google.com/uc?export=view&id=1OrOT2l5MHYAzv11PXUMqXptXB1w-mdUw)The application is implemented in a number of virtual machines hosted by Google Cloud Platform. In all of them has been installed the containerisation tool Docker, so that the four services can run in different containers. Furthermore the machines forms a Docker Swarm network, so that it is possible to deploy different replicas of the various services across the different VM. By doing so, is possible to improve the reliability of the application, because if some of the service's replica experience a problem, the Swarm orchestrator sent the traffic to the others available. The use of an orchestration tolls such as Docker Swarm, helps by balancing the traffic amongst the various available replica, so that no one particular machine should be overloaded.
+
+
+![](https://drive.google.com/uc?export=view&id=1OrOT2l5MHYAzv11PXUMqXptXB1w-mdUw)
+
+
+
+The application is implemented in a number of virtual machines hosted by Google Cloud Platform. In all of them has been installed the containerisation tool Docker, so that the four services can run in different containers. Furthermore the machines forms a Docker Swarm network, so that it is possible to deploy different replicas of the various services across the different VM. By doing so, is possible to improve the reliability of the application, because if some of the service's replica experience a problem, the Swarm orchestrator sent the traffic to the others available. The use of an orchestration tolls such as Docker Swarm, helps by balancing the traffic amongst the various available replica, so that no one particular machine should be overloaded.
 
 The application also contains and Nginx web server that act as reverse proxy, this allows the user to reach the application through the standard http port 80, instead of the Flask port 5000.
 
@@ -127,6 +132,8 @@ The database is also containerised with docker and deployed with multiple replic
 
 
 ![](https://drive.google.com/uc?export=view&id=1dLEH6Sxe5ruxxH0FZSflOdcR3iJsZ4tA)
+
+
 
 
 
@@ -140,6 +147,8 @@ From the requirements I created a number of user's stories, then I broke up the 
 
 The following images illustrates the stories I created and their score:
 
+
+
 ![](https://drive.google.com/uc?export=view&id=1mnck4qEeXGxTAgngYiHeZs9C1H46p9SK)
 
 
@@ -147,6 +156,8 @@ The following images illustrates the stories I created and their score:
 I development of the application follower the QA-Academy timeline in terms of topics, so I developed different aspect of the application once I learned the relevant topic. So I had to adapt my Sprints to cover these aspect, and to fit within the time window I had for the project, which was three weeks. So I covered the project development with a total of two Sprints.
 
 the following images illustrates a Sprint one:
+
+
 
 ![](https://drive.google.com/uc?export=view&id=1bghdX_VxN26iaMsbTXkAWF323SpCii8q)
 
@@ -209,7 +220,11 @@ As mentioned before, the project development followed the path given by the QA a
 
 The first stage of the development, even if it is not a proper CI pipeline , could be represented as follow:
 
+
+
 ![](https://drive.google.com/uc?export=view&id=1mCvdHod9OlQ4VBcBayNqcNKvuNSfrwu5)
+
+
 
 Once more tools were introduced I was able to change the development pipeline into a proper CI pipeline by using Ansible (Configuration tools), Docker SWARM (Orchestration Tool) and Nginx (web server as reverse proxy) and ,of course Jenkins (CI/CD server).
 
@@ -219,6 +234,8 @@ So the final CI pipeline became:
 
 ![](https://drive.google.com/uc?export=view&id=1J5nlampg5Hsu72CA-XmO3-SKhVCJ6MUh)
 
+
+
 ### Testing 
 
 The application tests have been done by using the Python modules pytest.
@@ -227,11 +244,15 @@ The initial situation for the four services, before unit testing was:
 
 ##### 	service 1
 
+
+
 ![](https://drive.google.com/uc?export=view&id=1_mAXZlk_LeceqoKKhEPDBz9q_NWH1_3g)
 
 
 
 ##### 	service 2
+
+
 
 ![](https://drive.google.com/uc?export=view&id=1XQTKgXOgjwGF76ybrSYHNhIcP5Tifn2H)
 
@@ -239,11 +260,15 @@ The initial situation for the four services, before unit testing was:
 
 ##### 	service 3
 
+
+
 ![](https://drive.google.com/uc?export=view&id=16uTCm3jlNXdL0lMSLryak-0AgjMZuNnR)
 
 
 
 ##### 	service 4
+
+
 
 ![](https://drive.google.com/uc?export=view&id=10Y7xOp6QucBtWPD4jzVLjTEx5FrIay_Z)
 
@@ -423,13 +448,19 @@ The stages that Jenkins undertake are:
 
 The following illustrates the Jenkins stage views for the application:
 
+
+
 ![](https://drive.google.com/uc?export=view&id=1Ok51UMig6DWlZpfFh8V2Cov-0PwxjxiB)
 
 
 
 During the initial attempt of deploy the application I also experiences some problems:
 
+
+
 ![](https://drive.google.com/uc?export=view&id=1D98-3HgvrSHGzhGS5GpjTUoPzpeOOUfH)
+
+
 
 I found the reason by inspecting the build's console log:
 
