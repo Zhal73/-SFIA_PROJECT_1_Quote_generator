@@ -143,8 +143,8 @@ I development of the application follower the QA-Academy timeline in terms of to
 
 the following images illustrates a Sprint one:
 
+![](https://drive.google.com/uc?export=view&id=1bghdX_VxN26iaMsbTXkAWF323SpCii8q)
 
-		![](https://drive.google.com/uc?export=view&id=1bghdX_VxN26iaMsbTXkAWF323SpCii8q) 
 
 
 ### Risk Assessment
