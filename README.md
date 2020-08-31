@@ -18,6 +18,10 @@ Jira board : https://domenico-gagliano.atlassian.net/jira/software/projects/QGS/
 
 DockerHub : https://hub.docker.com/u/zhal73
 
+
+
+Note: Some of the images may not load on this document, despite they are shared in a public folder in my Google Drive and accessible from anyone on the internet. For completeness I added a PDF version of this README document.
+
 ### Index
 
 - [Project Brief](#project-brief)
