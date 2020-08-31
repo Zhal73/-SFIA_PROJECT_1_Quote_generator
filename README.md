@@ -490,6 +490,20 @@ I had to specify the full path for the command:
 
 
 
+The visual aspect of the application is very simple, it has an Home page with a welcome message and a link to a page that will generate a new quote:
+
+
+
+![]( https://drive.google.com/uc?export=view&id=1adwHOcK0mOT8cWPCo4UDPgP17hOeKJdE)
+
+The page with the new quote contains a link to generate another quote, and the list of the quotes previously generated:
+
+
+
+![]( https://drive.google.com/uc?export=view&id=1IXnV6GlP-6RMveHNYDK-NaF-rkEEPViF)
+
+
+
 ### Future Improvements
 
 The result of this project represents the minimum viable product that satisfies the minimum requirements. Some of the extended requirements have not been covered, so these could be introduced in future developments of the application. This includes:
