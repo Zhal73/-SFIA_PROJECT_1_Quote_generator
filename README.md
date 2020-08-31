@@ -114,7 +114,9 @@ Wont have:
 
 The four services are small Flask application written in Python. The following diagram represent the architecture of the application with the interaction between the services:
 
-![](https://drive.google.com/uc?export=view&id=1OrOT2l5MHYAzv11PXUMqXptXB1w-mdUw)The application is implemented in a number of virtual machines hosted by Google Cloud Platform. In all of them has been installed the containerisation tool Docker, so that the four services can run in different containers. Furthermore the machines forms a Docker Swarm network, so that it is possible to deploy different replicas of the various services across the different VM. By doing so, is possible to improve the reliability of the application, because if some of the service's replica experience a problem, the Swarm orchestrator sent the traffic to the others available. The use of an orchestration tolls such as Docker Swarm, helps by balancing the traffic amongst the various available replica, so that no one particular machine should be overloaded.
+![](https://drive.google.com/uc?export=view&id=1OrOT2l5MHYAzv11PXUMqXptXB1w-mdUw)
+
+The application is implemented in a number of virtual machines hosted by Google Cloud Platform. In all of them has been installed the containerisation tool Docker, so that the four services can run in different containers. Furthermore the machines forms a Docker Swarm network, so that it is possible to deploy different replicas of the various services across the different VM. By doing so, is possible to improve the reliability of the application, because if some of the service's replica experience a problem, the Swarm orchestrator sent the traffic to the others available. The use of an orchestration tolls such as Docker Swarm, helps by balancing the traffic amongst the various available replica, so that no one particular machine should be overloaded.
 
 The application also contains and Nginx web server that act as reverse proxy, this allows the user to reach the application through the standard http port 80, instead of the Flask port 5000.
 
@@ -206,6 +208,7 @@ As mentioned before, the project development followed the path given by the QA a
 The first stage of the development, even if it is not a proper CI pipeline , could be represented as follow:
 
 ![](https://drive.google.com/uc?export=view&id=1mCvdHod9OlQ4VBcBayNqcNKvuNSfrwu5)
+
 
 Once more tools were introduced I was able to change the development pipeline into a proper CI pipeline by using Ansible (Configuration tools), Docker SWARM (Orchestration Tool) and Nginx (web server as reverse proxy) and ,of course Jenkins (CI/CD server).
 
