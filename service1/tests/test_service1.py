@@ -24,7 +24,7 @@ class TestBase(TestCase):
         db.session.commit()
         db.drop_all()
         db.create_all()
-        quote=all_quotes(author="Albert Einsten", quote="In the middle of difficulty lies opportunity", genuinity ="Awsome!!! This is a pearl of wisdom")
+        quote=all_quotes(author="Anton Ego in Ratatouille", quote="Not everyone can become a great artist, but a great artist can come from anywhere.", genuinity ="Awsome!!! This is a pearl of wisdom")
 
         db.session.add(quote)
         db.session.commit()
@@ -48,8 +48,8 @@ class TestService1(TestBase):
     def test_generate_quote(self):
         with self.client:
             with requests_mock.Mocker() as m:
-                m.get('http://service2:5001/get_author', text='Albert Einsten')
-                m.get('http://service3:5002/get_quote', text='In the middle of difficulty lies opportunity.')
+                m.get('http://service2:5001/get_author', text='Anton Ego in Ratatouille')
+                m.get('http://service3:5002/get_quote', text='Not everyone can become a great artist, but a great artist can come from anywhere.')
                 m.post('http://service4:5003/get_genuinity', text='Awsome!!! This is a pearl of wisdom')                
                 resp = self.client.get(url_for('generate_quote'))
                 self.assertEqual(resp.status_code, 200)

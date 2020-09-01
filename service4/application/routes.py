@@ -11,20 +11,10 @@ import random
 def get_genuinity():
     
     quotes = {
-        "Albert Einstein": "In the middle of difficulty lies opportunity.",
-        "Walt Disney": "The way to get started is to quit talking and begin doing.",
-        "Winston Churchill" : "The pessimist sees difficulty in every opportunity. the optimist sees opportunity in every difficulty.",
-        "Nelson Mandela": "A winner is a dreamer who never gives up",
-        "Henry Ford": "Whether you think you can or you think you can not, you are right.",
-        "George Addair": "Everything great you can ever wanted is on the other side of your fear.",
-        "Amelia Earhart": "The most difficult thing is the decision to act, the rest is merely tenacity.",
-        "Vincent Van Gogh": "If you hear a voice within you say -you cannot paint!- then by all means paint and that voice will be silenced.",
-        "Confucius": "Our greatest glory is not in never falling, but in rising every time we fall.",
-        "Francis of Assisi": "Start by doing what is necessary; then do what is possible; and suddenly you are doing the impossible.",
-        "Denzel Washington": "Without commitment you never start but  without consistency you never finish.",
-        "Theodore Roosevelt": "Believe you can and you are halfway there.",
-        "Pele": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
-        "Michelangelo": "The greatest danger for most of us is not that our aim is too high and we miss it, but that it is too low and we reach it."
+        "Anton Ego in Ratatouille": "Not everyone can become a great artist, but a great artist can come from anywhere.",
+        "Santa Claus in The Polar Express": "There is no greater gift than friendship.",
+        "Mickey Mouse" : "To laugh at yourself, is to love yourself.",
+        "Peter Pan": "All it takes is little faith and trust.",
     }
     #retrieves the json data sent from service1
     data_sent = request.get_json()

@@ -23,10 +23,7 @@ class TestService2(TestBase):
     def test_getanimal(self):
         response = self.client.get(url_for('get_author'))
         check = False
-        for item in ['Albert Einstein','Walt Disney','Winston Churchill',
-                'Nelson Mandela','Henry Ford','George Addair','Amelia Earhart',
-                'Vincent Van Gogh','Confucius','Francis of Assisi','Denzel Washington',
-                'Theodore Roosevelt','Pele','Michelangelo']:
+        for item in ['Anton Ego in Ratatouille','Santa Claus in The Polar Express','Mickey Mouse','Peter Pan']:
             if bytes.decode(response.data) == item:
                 check = True
         self.assertTrue(check)

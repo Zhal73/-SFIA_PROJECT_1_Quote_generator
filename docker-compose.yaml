@@ -54,7 +54,7 @@ services:
   database: 
     image: mysql:5.7
     deploy:
-          replicas: 3
+          replicas: 1
     ports:
       - target: 3306
         published: 3306
