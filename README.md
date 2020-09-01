@@ -408,7 +408,7 @@ However we have not covered these tests in the academy, so I am not familiar wit
 
 To deploy the application I used the following technologies:
 
-- 3 GCP Virtual Machines
+- 4 GCP Virtual Machines
 - 1 GCP MySQL database for unit testing purposes
 - Jenkins Pipeline for CI/CD with Github Webhooks
 - Pytest to test the application
@@ -423,7 +423,7 @@ To deploy the application I used the following technologies:
 
 Before I deployed the application I had to set up the virtual machines and I had to install the necessary software on them. The steps I followed were:
 
-1. Setup 3 VM's on GCP with Ubuntu 18.04 LTS
+1. Setup 4 VM's on GCP with Ubuntu 18.04 LTS
 
 2. Setup SSH keys for the 3 VM's and store public key of the virtual machine where the Jenkins server is going to be installed, into all the VM. To do so I used the GCP console, and I stored the ssk-key into the SSH section of the machine configuration, so that at any start of the VM the key is automatically loaded.    
 
