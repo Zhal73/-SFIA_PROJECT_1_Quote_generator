@@ -4,3 +4,4 @@ kubectl apply -f service1.yaml
 kubectl apply -f service2.yaml
 kubectl apply -f service3.yaml
 kubectl apply -f service4.yaml
+kubectl apply -f sfia2-load-balancer.yaml
